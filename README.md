@@ -5,3 +5,4 @@ Chose atomization energy as the imput and prediction parameter, and 1000 trainin
 
 Investigated its ‘Final validation MAE’ with 200 epochs on GPU (Tesla T4) and predictions, then repeat with 3D data as descriptors and compared their performance.
 
+Please find more details and code in the link: 
