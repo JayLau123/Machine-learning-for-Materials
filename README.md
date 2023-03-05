@@ -8,3 +8,6 @@ Investigated its ‘Final validation MAE’ with 200 epochs on GPU (Tesla T4) an
 Please find more details and code in the link:
 
 https://colab.research.google.com/drive/1jH3dWjqh24FpDSyEQ1d2ynV3I2aEvhif?usp=sharing
+
+# Inverse Problem: graph theory+ CNN for molecular structure restruction
+
