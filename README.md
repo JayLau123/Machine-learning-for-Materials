@@ -14,3 +14,7 @@ https://colab.research.google.com/drive/1jH3dWjqh24FpDSyEQ1d2ynV3I2aEvhif?usp=sh
 Based on graph theory and imitation learning method to train a Convolutional Neural Network, the data we feed to the model are many graphs, which can be regarded as a function of vertex and edges: $G=G(V,E)$. The degree of each vertex $V$ and weights of each edge $E$ represents different atoms and chemical bond. So we start from a simple graph and Markov decision process, by adding or deleting the vertice and edges, with many iterration process until we find the most accurate graph that can describe the chemical structure. 
 
 For more relevant works: http://ericjonas.com/
+
+# Computation-aided characterization for materials
+
+Train a forward model with public database from PubChem, NIST, Wiley’s library, etc. Once we input a molecule structure (graph-based representation), it will output the spectra automatically.
