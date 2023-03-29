@@ -15,6 +15,6 @@ Based on graph theory and imitation learning method to train a Convolutional Neu
 
 For more relevant works: http://ericjonas.com/
 
-# Computation-aided characterization for materials
+# Computation-aided characterization for molecules
 
 Train a forward model with public database from PubChem, NIST, Wiley’s library, etc. Once we input a molecule structure (graph-based representation), it will output the spectra automatically.
