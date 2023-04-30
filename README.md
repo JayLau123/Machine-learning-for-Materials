@@ -1,4 +1,7 @@
 # CNN-for-Molecular-Properties-
+
+This section focuses on the fusion of data science, machine learning with molecules and chemistry.
+
 Trained a convolutional neural network (CNN) for image analysis and pattern recognition with molecular dataset QM9 and toolbox SchNetPack on Google Colab.
 
 Chose atomization energy as the imput and prediction parameter, and 1000 training examples in 2D/3D dataset for validation, successfully reduced the learning rate without improvement of the validation loss. 
