@@ -30,7 +30,7 @@ For more relevant works: http://ericjonas.com/
 
 Graph-based deep learning frameworks have already demonstrated their creative roles in the design and discovery of functional materials by identifying structure–property correlations and making efficient low-cost predictions, by representing material systems in graphs and properly designing message passing strategies. Its explicit structural relationship and easy-to-model mathematical properties make it increasingly popular. We can recall from early education that any molecular structure contains atoms and chemical bonds, and it is so intuitive to combine it with the graph theory and GNN. 
 
-Therefore, it's reasonable to transfer a chemical molecule into a unique graph as below:
+GNN based graph embeddings have recently attracted growing attention, due to the natural representation of molecular structures as graphs. Therefore, it's reasonable to transfer a chemical molecule into a unique graph as below:
 
 1. Atoms=Vertices $V=\{v_{i}\}$. Different colored vertices represent different kinds of atoms, which corresponding to a particular element. The maximum vertex degree represents the valence of that element.
 
