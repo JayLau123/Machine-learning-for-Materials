@@ -4,7 +4,7 @@ Probably approximately correct function(PAC) explains how to find the best candi
  
 $$p(|f(x)-y| \leq \epsilon) \geq 1-\delta$$
 
-$x$ is the candidate structure, $y$ is the observed properties $P$ from Raman spectrum, which is the true label. If the prediction is very accurate, then $|f(x)-P|\leq \epsilon$. We can calculate the spectrum properties with known atoms and their structure based on quantum chemistry. Let's denote it as $\boldsymbol{f}$. We hope to find the best candidate structure $x$ with a high probability: $p(|f(x)-P| \leq \epsilon) \geq 1-\delta$. However, regardless of the difficulties to choose exchange-correlation functional $E_{XC}$ in solving Kohn-Sham equation(KS), the $\boldsymbol{f}$ can be very computational-expensive. Alternatively, can we use current database from Materials Project, NOMAD, NIST, etc, to train a graph neural network(GNN) to predict spectrum, so that given a molecular structure (graph-based representation), it can output the spectrum automatically? We are going to build such a network named forward model $\boldsymbol{f}$.
+$x$ is the candidate structure, $y$ is the observed properties $P$ from spectrum, which is the true label. If the prediction is very accurate, then $|f(x)-P|\leq \epsilon$. We can calculate the spectrum properties with known atoms and their structure based on quantum chemistry. Let's denote it as $\boldsymbol{f}$. We hope to find the best candidate structure $x$ with a high probability: $p(|f(x)-P| \leq \epsilon) \geq 1-\delta$. However, regardless of the difficulties to choose exchange-correlation functional $E_{XC}$ in solving Kohn-Sham equation(KS), the $\boldsymbol{f}$ can be very computational-expensive. Alternatively, can we use current database from Materials Project, NOMAD, NIST, etc, to train a graph neural network(GNN) to predict spectrum, so that given a molecular structure (graph-based representation), it can output the spectrum automatically? We are going to build such a network named forward model $\boldsymbol{f}$.
 
 
 
@@ -14,9 +14,11 @@ This section focuses on the fusion of data science, machine learning with molecu
 
 Trained a convolutional neural network (CNN) for image analysis and pattern recognition with molecular dataset QM9 and toolbox SchNetPack on Google Colab.
 
-Chose atomization energy as the imput and prediction parameter, and 1000 training examples in 2D/3D dataset for validation, successfully reduced the learning rate without improvement of the validation loss. 
+We have achieved so far: 
 
-Investigated its ‘Final validation MAE’ with 200 epochs on GPU (Tesla T4) and predictions, then repeat with 3D data as descriptors and compared their performance.
+- Chose atomization energy as the imput and prediction parameter, and 1000 training examples in 2D/3D dataset for validation, successfully reduced the learning rate without improvement of the validation loss. 
+
+- Investigated its ‘Final validation MAE’ with 200 epochs on GPU (Tesla T4) and predictions, then repeat with 3D data as descriptors and compared their performance.
 
 Please find more details and code in the link:
 
@@ -28,10 +30,6 @@ https://colab.research.google.com/drive/1jH3dWjqh24FpDSyEQ1d2ynV3I2aEvhif?usp=sh
 <img width="1048" alt="Screenshot 2023-03-27 at 10 21 10" src="https://user-images.githubusercontent.com/98719524/230827741-3d6a560a-2a70-4216-8efd-59356d3d736b.png">
 
 
-
-#### Gradient descent(GD)
-
-Gradient descent is a one-order iterative optimization algorithm used to find the local minima of a given function.It works by taking small steps in the direction of negative gradient until it reaches a point where the gradient is zero or close to zero.
 
 #### Generative adversarial network (GAN)
 
