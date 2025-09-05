@@ -2,7 +2,45 @@
 
 When training ML models, performance often depends on a large number of hyperparameters. For instance, in a fully connected deep neural network, important hyperparameters include the number of hidden layers, the number of nodes per layer, the choice of activation function, learning rate, and more. Manually tuning these parameters in high-dimensional spaces is typically non-intuitive and time-consuming, making automated hyperparameter optimization methods particularly useful.
 
+## 1. What are hyperparameters?
+
+Hyperparameters are settings you choose before training a model, unlike model parameters (weights) which are learned from data.
+
+Examples in a neural network:
+- Number of layers
+- Number of neurons per layer
+- Learning rate
+- Activation function (ReLU, Sigmoid, etc.)
+
+Choosing the right hyperparameters strongly affects model performance, but figuring them out manually is tricky, especially when there are many.
+
+## 2. Why automated hyperparameter optimization?
+
+- Manually testing each combination is slow and inefficient.
+- Automated methods can explore the “hyperparameter space” intelligently to find combinations that give better performance, which is especially important in high-dimensional spaces (many hyperparameters).
+
+
+## 3. How wandb helps
+
+Weights & Biases (wandb) is a tool that simplifies hyperparameter optimization. It automates the trial-and-error of hyperparameter tuning, tracks all experiments, and helps you make sense of which settings work best.
+
+It provides a feature called “sweeps”, which lets you:
+
+- Define which hyperparameters to try and their ranges.
+- Choose a search strategy, like:
+   - Random search: Try random combinations.
+   - Grid search: Try all combinations in a grid (less efficient for many hyperparameters).
+   - Bayesian optimization: Uses previous results to make smarter choices about what to try next.
+- Track performance of each combination automatically.
+- wandb also gives visualizations, so you can quickly see which hyperparameters worked best and compare experiments.
+- It integrates easily with your Python/ML code. You don’t need to write a lot of extra code to log metrics.
+- It balances ease of use and power, making it ideal for optimizing GCNNs, CGCNNs, or other models.
+
+
+
 **In our group, we often use [Weights & Biases (wandb)](https://wandb.ai/) for hyperparameter optimization.** Wandb provides a flexible and user-friendly interface for running sweeps, which support a range of optimization strategies such as Bayesian optimization, random search, and grid search. It also integrates seamlessly with existing ML workflows and provides powerful visualization tools to analyze results. Depending on the task, other tools may also be appropriate, but wandb strikes a good balance between ease of use and capability.
+
+
 
 ## Usage
 
