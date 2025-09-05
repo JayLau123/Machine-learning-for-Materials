@@ -48,6 +48,42 @@ Wandb offers comprehensive features for logging training metrics such as loss an
 
 Wandb is free for academic use. **If you plan to use it, please ask Jiayu to add you to our academic group workspace on the platform.** This ensures all your experiments are organized under the group account and benefit from team features. **Check out their [official documentation](https://docs.wandb.ai/), including the [quickstart guide](https://docs.wandb.ai/quickstart/), [API reference](https://docs.wandb.ai/ref/), and a collection of [example projects](https://github.com/wandb/examples) on GitHub.com.**
 
+
+
+### 1. What wandb is used for
+
+- Logging training metrics: You can track numbers like loss, accuracy, or any custom metrics you define during training.
+- Tracking hyperparameters: You can record settings like learning rate, number of layers, batch size, etc., for each run.
+- Organizing runs: `wandb` lets you compare multiple experiments to see which hyperparameters or model changes improved performance.
+- Automating hyperparameter optimization: Using **sweeps**, `wandb` can automatically try different combinations of hyperparameters.
+- Saving artifacts: You can store models, datasets, or files in `wandb`, and they are versioned. This helps with reproducibility and collaboration. (Note: an artifact is essentially a tracked file or dataset that is versioned and stored in the wandb system 是一个被版本控制并存储在 wandb 系统中的跟踪文件或数据集)
+  
+   - Dataset artifact: Raw or processed datasets that your model uses.
+	- Model artifact: Trained models that you want to save and later reuse.
+	- Other files: Scripts, configuration files, or anything else relevant to reproducibility.
+
+### 2. Analogy
+
+Think of `wandb` like a fitness tracker for ML experiments:
+- Instead of steps and heart rate, it tracks your training progress and performance metrics.
+- Instead of workouts, it tracks different experiments and hyperparameter settings.
+
+This makes it much easier to analyze, improve, and reproduce your results.
+
+
+### 3. Academic use and group setup
+
+`wandb` is free for academic use.For your group projects, you should ask advisor to add you to the academic group workspace. This way, all your experiments are organized under the group account, and you can benefit from team features like shared dashboards and collaborative analysis.
+
+
+### 4. Learning resources
+
+- Official documentation: guides you through installation, API, and best practices.
+- Quickstart guide: helps you get wandb running with minimal setup.
+
+
+
+
 ## Example codes
 
 ### Installation
